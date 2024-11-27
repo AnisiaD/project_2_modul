@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кондитерская</title>
+    <style>
+        body {
+            background-color: #e6f7ff; /* Бежевый фон */
+            font-family: 'Noteworthy', sans-serif;
+            color: white; /* Цвет текста */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f7e6d2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f7e6d2;
+            padding: 10px;
+        }
+
+        nav a {
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #f7e6d2;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #e0f5ff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f7e6d2;
+        }
+
+        form {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="radio"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #f7e6d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Добро пожаловать в нашу кондитерскую!</h1>
+    </header>
+
+    <nav>
+        <a href="#home" class="active"> <h1>Главная</h1></a>
+        <a href="#about">О нас</a>
+        <a href="#products">Продукты</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакты</a>
+        <a href="#order">Форма заказа</a>
+        <a href="../2_modul_project/bloki.html" target="_self" </a> <p align="center"> <font color="white", face="Palatino Linotype", size="5">Новинка 2024 !!! </font></p>
+
+    </nav>
+
+    <section id="home">
+        <h2>Главная</h2>
+        <p>Мы предлагаем широкий ассортимент кондитерских изделий на любой вкус!</p>
+    </section>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Наша кондитерская была основана в 2023 году и предлагает только самые лучшие и свежие продукты.</p>
+        <a href="#home">К началу</a>
+    </section>
+
+    <section id="products">
+        <h1><p align="center"> <font color="dimgray", face="Palatino Linotype", size="5">Продукты</font></p></h1>
+        <h3>Торты</h3>
+        <img src="tort-freze-1-1.webp" alt="Торт">
+        <p>Нежные десерты на любой праздник.</p>
+
+        <h3>Пирожные</h3>
+        <img src= "-2160-jparfenchikova-2021-07-29.jpg" alt="Пирожные">
+        <p>Свежие пирожные, которые тают во рту.</p>
+        <li><a href="../2_modul_project/img.html" target="_self"><img height="70px" src="../2_modul_project/900976c87e75badb3f06d525752c4912.jpg"</a>
+        <a href="#home">К началу</a>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <h3>Наши работы</h3>
+        <img src="44e1219d08d44dc499551922ae80.jpg" alt="Работа 1">
+        <img src= "1000-6465377e150d54f91786da192317b5cb.jpg" alt="Работа 2">
+        <img src= "IMG_4068-1-scaled-1.jpg" alt="Работа 3">
+        <a href="#home">К началу</a>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Вы можете связаться с нами по телефону или электронной почте.</p>
+        <a href="#home">К началу</a>
+    </section>
+
+    <section id="order">
+        <h2>Форма заказа</h2>
+        <form action="https://www.bing.com/search?" method="POST" onsubmit="return validateForm()">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone" name="phone" required><br>
+
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required><br>
+
+            <div>
+                <p>Выбор продукта:</p>
+                <input type="radio" id="cake" name="product" value="cake" required>
+                <label for="cake">Торт</label><br>
+                <input type="radio" id="pastry" name="product" value="pastry" required>
+                <label for="pastry">Пирожное</label><br>
+            </div>
+
+            <input type="submit" value="Отправить заказ">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Кондитерская. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            // Здесь можно добавить дополнительные проверки перед отправкой формы, если нужно
+            return true; // Если форма валидна, возвращаем true
+        }
+
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-0ERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdItbNJua0e923+mo//f6V8Qbsw3" src="https://cdn.jsdeli
+vr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.is"></script>
+</body>
+
+</html>
