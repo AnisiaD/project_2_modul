@@ -145,29 +145,38 @@
         <a href="#home">К началу</a>
     </section>
 
-    <section id="order">
-        <h2>Форма заказа</h2>
-        <form action="https://www.bing.com/search?" method="POST" onsubmit="return validateForm()">
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" required><br>
+   <h3 align="center"> Создание заказа </h3>
+<!--<form action="../../cgi-bin/form_action.py" method='get' target='_self'>-->
+<!--<form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>-->
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <p>Для поисковика:<input type="hidden"  name="q" value="search"></p>
+    <p>Фамилия: <input type="Text" name="last_name" size=20  value="Анисия"></p>
+    <p>Возраст: <input type="Number" name="age" size=20 value="0"></p>
+    <p>Место проживания:
+        <input type="Radio" name="place" value="Moscow">Москва
+        <input type="Radio" name="place" value="Nizhny" checked >Санкт-Петербург
+    </p>
 
-            <label for="phone">Телефон:</label>
-            <input type="text" id="phone" name="phone" required><br>
+    <p>Что выберете: 
+        <input type="Checkbox" name="experience"  value="10" checked>Торты 
+        <input type="Checkbox"  name="experience"   value="20" checked>Эклеры
+        <input type="Checkbox" name="experience" value="30" checked>Пирожные
+    </p>
 
-            <label for="quantity">Количество:</label>
-            <input type="number" id="quantity" name="quantity" min="1" required><br>
+    <p>Повод: 
+        <select name="languages">
+            <OPTION value="Владею свободно">Для себя</OPTION>
+            <OPTION value="Читаю и перевожу со словарем">На праздник</OPTION>
+        </select>
+    </p>
 
-            <div>
-                <p>Выбор продукта:</p>
-                <input type="radio" id="cake" name="product" value="cake" required>
-                <label for="cake">Торт</label><br>
-                <input type="radio" id="pastry" name="product" value="pastry" required>
-                <label for="pastry">Пирожное</label><br>
-            </div>
+    <p>
+        <input type="Reset"  name="Reset"  value="Обновить">
+        <input type="Submit" name="submit"  value="Отправить">
+    </p>
 
-            <input type="submit" value="Отправить заказ">
-        </form>
-    </section>
+</form>
+<pre>
 
     <footer>
         <p>&copy; 2024 Кондитерская. Все права защищены.</p>
