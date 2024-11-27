@@ -1,1 +1,1 @@
-https://github.com/AnisiaD/project_2_modul.git
+https://anisiad.github.io/project_2_modul/
